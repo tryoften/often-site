@@ -1,0 +1,59 @@
+<div class="page container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="header">
+                <div class="image" style="background-image: url({{image.large_url}})"></div>
+                <div class="mask"></div>
+
+                <div class="meta">
+                    <h2 class="name">{{name}}</h2>
+                    <div class="description">
+                        <span>{{description}}</span>
+                    </div>
+                    <a href="tryoften://pack/{{id}}" class="primary download-btn">Open in App</a>
+                </div>
+
+                <div class="tabbar">
+                    <div id="quote" class="tab selected">Quotes</div>
+                    <div id="gif" class="tab">GIFS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="items row">
+        <div class="col-xs-12">
+        {{#items}}
+            <div class="item {{type}}">
+                {{#if isGIF}}
+                    <img src="{{image.medium_url}}" />
+                {{else}}
+                    <span>{{text}}</span>
+                {{/if}}
+            </div>
+        {{/items}}
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js"></script>
+<script>
+    function filterItems(type) {
+        $('.item').fadeOut();
+        $('.item.'+type).fadeIn();
+    }
+
+    $('.tab').click(function(e) {
+        var selectedTab = $('.tab.selected');
+        var tab = $(e.target);
+
+        if (selectedTab.attr('id') === tab.attr('id')) {
+            return;
+        }
+
+        selectedTab.removeClass('selected');
+        tab.addClass('selected');
+
+        filterItems(tab.attr('id'));
+    });
+
+    filterItems($('.tab.selected').attr('id'));
+</script>

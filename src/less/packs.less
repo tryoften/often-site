@@ -1,0 +1,35 @@
+.packs {
+  header {
+    background: white;
+    .brand {
+      text-align: center;
+      margin: 10px auto;
+    }
+  }
+
+  .items {
+    @media (max-width: @screen-xs-min) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  .media-item {
+    margin: 10px;
+    display: block;
+  }
+
+  .media-item-link {
+
+    @media (max-width: @screen-xs-min) {
+      width: 49%;
+      margin: 10px auto;
+
+      .media-item {
+        margin: 10px auto;
+      }
+    }
+
+    display: inline-block;
+  }
+}

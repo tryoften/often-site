@@ -200,7 +200,7 @@ body {
   left: 0;
   bottom: 0;
   position: relative;
-  background: url(../../img/iphone.svg) no-repeat 100% 100%;
+  background: url(https://storage.googleapis.com/firebase-often-dev.appspot.com/static/img/iphone.svg) no-repeat 100% 100%;
   background-size: contain;
   display: block;
   margin: 0 auto;
@@ -252,7 +252,7 @@ body {
 }
 
 .appstoreicon a {
-  background: url(/img/appstoreicon.svg) no-repeat left top;
+  background: url(https://storage.googleapis.com/firebase-often-dev.appspot.com/static/img/appstoreicon.svg) no-repeat left top;
   font-family: "Montserrat", sans-serif;
   color: white;
   display: block;
