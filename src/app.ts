@@ -1,7 +1,7 @@
 import * as express from 'express';
 import * as exphbs from 'express-handlebars';
 import * as path from 'path';
-import { Request, Response } from 'express';
+import { Request, Response, Router } from 'express';
 import { Packs } from '@often/often-core';
 
 let app = express();
@@ -17,7 +17,7 @@ app.engine('.hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
-app.use('/static', express.static(path.join(__dirname, '../client')));
+app.use('/public/', express.static(path.join(__dirname, 'public')) as Router);
 
 app.get('/', function (req, res) {
 	res.render('home');
