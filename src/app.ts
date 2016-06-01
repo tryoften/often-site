@@ -1,10 +1,9 @@
-/// <reference path="../typings/tsd.d.ts" />
-
 import * as express from 'express';
 import * as exphbs from 'express-handlebars';
 import * as path from 'path';
 import { Request, Response } from 'express';
-import Packs from '../app/Collections/Packs';
+import { Packs } from '@often/often-core';
+
 let app = express();
 let packs = new Packs([], {autoSync: true});
 
@@ -18,7 +17,7 @@ app.engine('.hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
-app.use('/public/', express.static(path.join(__dirname, '../client')));
+app.use('/static', express.static(path.join(__dirname, '../client')));
 
 app.get('/', function (req, res) {
 	res.render('home');

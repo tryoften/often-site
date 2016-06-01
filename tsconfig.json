@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "outDir": "build",
+		"jsx": "React",
+        "moduleResolution": "node",
+		"target": "es5",
+		"experimentalDecorators": true
+    },
+    "files": [
+        "typings/index.d.ts",
+        "node_modules/@often/often-core/custom-typings/backbonefire/backbonefire-global.d.ts",
+        "src/app.ts"
+    ]
+}
