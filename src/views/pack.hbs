@@ -35,25 +35,5 @@
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js"></script>
-<script>
-    function filterItems(type) {
-        $('.item').fadeOut();
-        $('.item.'+type).fadeIn();
-    }
-
-    $('.tab').click(function(e) {
-        var selectedTab = $('.tab.selected');
-        var tab = $(e.target);
-
-        if (selectedTab.attr('id') === tab.attr('id')) {
-            return;
-        }
-
-        selectedTab.removeClass('selected');
-        tab.addClass('selected');
-
-        filterItems(tab.attr('id'));
-    });
-
-    filterItems($('.tab.selected').attr('id'));
-</script>
+<script src="/public/js/browser-deeplink.js"></script>
+<script src="/public/js/pack.js"></script>
