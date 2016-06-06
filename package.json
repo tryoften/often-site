@@ -7,6 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
+  "engines": {
+    "node": ">=5.9.1"
+  },
+  "scripts": {
+    "start": "node build/app.js",
+    "monitor": "gulp server",
+    "deploy": "gcloud preview app deploy"
+  },
   "license": "ISC",
   "dependencies": {
     "@often/often-core": "^1.0.0",
