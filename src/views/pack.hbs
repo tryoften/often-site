@@ -1,4 +1,10 @@
 <div class="page container">
+    <header>
+        <div class="brand">
+            <div class="logo">Often</div>
+            <div class="message">| Express Yourself</div>
+        </div>
+    </header>
     <div class="row">
         <div class="col-xs-12">
             <div class="header">
@@ -21,17 +27,16 @@
         </div>
     </div>
     <div class="items row">
-        <div class="col-xs-12">
-        {{#items}}
-            <div class="item {{type}}">
-                {{#if isGIF}}
-                    <img src="{{image.medium_url}}" />
-                {{else}}
-                    <span>{{text}}</span>
-                {{/if}}
-            </div>
-        {{/items}}
+    {{#items}}
+        <div class="item {{type}}">
+            {{#if isGIF}}
+                <img src="{{image.medium_url}}" />
+            {{else}}
+                <span>{{text}}</span>
+                <div class="category" id="{{category_id}}">{{category_name}}</div>
+            {{/if}}
         </div>
+    {{/items}}
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js"></script>

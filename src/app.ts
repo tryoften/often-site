@@ -2,7 +2,7 @@ import * as express from 'express';
 import * as exphbs from 'express-handlebars';
 import * as path from 'path';
 import { Request, Response, Router } from 'express';
-import { Packs } from '@often/often-core';
+import { Packs, Pack } from '@often/often-core';
 
 let app = express();
 let packs = new Packs([], {autoSync: true});
@@ -20,12 +20,14 @@ app.set('view engine', '.hbs');
 app.use('/public/', express.static(path.join(__dirname, 'public')) as Router);
 
 app.get('/', function (req, res) {
-	res.render('home');
+	res.render('home', {
+		title: 'Often'
+	});
 });
 
 app.get('/about', function (req, res) {
 	res.render('about');
-})
+});
 
 app.get('/css/style.css', function (req, res) {
 	res.sendFile(path.join(__dirname, 'css/style.css'));
@@ -60,6 +62,6 @@ app.get('/pack/:id', (req: Request, res: Response) => {
 	});
 });
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || '8080', () => {
 	console.log('Listening on port 8080');
 });

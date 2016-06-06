@@ -4,8 +4,8 @@ var server = require('gulp-express');
 var clean = require('gulp-clean');
 var less = require('gulp-less');
 var ts = require('gulp-typescript');
-var tsProject = ts.createProject('tsconfig.json');
 var path = require('path');
+var tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('clean', function () {
     return gulp
@@ -42,6 +42,7 @@ gulp.task('server', ['build'], function () {
     server.run(['build/app.js']);
 
     // Restart the server when file changes
+    gulp.watch('src/views/**/*.*', ['copy', 'less']);
     gulp.watch(['src/less/**/*.less'], ['less']);
     gulp.watch(['app/scripts/**/*.js'], ['jshint']);
     gulp.watch(['app/images/**/*'], server.notify);
