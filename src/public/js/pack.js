@@ -35,3 +35,5 @@ $('.download-btn').click(function(e) {
 });
 
 filterItems($('.tab.selected').attr('id'));
+
+$('.nano').nanoScroller();

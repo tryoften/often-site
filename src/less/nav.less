@@ -1,5 +1,6 @@
 .nav {
-  padding: 30px 54px 0 54px;
+  margin-top: 30px;
+  padding: 0;
 
   .brand {
     height: 58px;
@@ -39,11 +40,37 @@
       }
     }
   }
+
+  .login-btn {
+    display: inline-block;
+    padding: 0 0 0 18px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #202020;
+    display: inline-block;
+    border-radius: 33px;
+    border: solid 2px #202020;
+    padding: 6px 24px;
+
+    &:hover {
+      color:#fff;
+      background: #202020;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-transition: background-color .20s linear;
+      -moz-transition: background-color .20s linear;
+      -o-transition: background-color .20s linear;
+      transition: background-color .20s linear;
+    }
+  }
+
 }
 
 @media only screen and (min-width : 400px) and (max-width: 799px) {
   .nav {
-    padding: 30px 18px 0 18px;
+    margin-top: 15px;
+    padding: 0px 18px;
 
     .menu {
       display: none;

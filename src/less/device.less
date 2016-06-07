@@ -1,0 +1,52 @@
+.device {
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  position: relative;
+  background: url(https://storage.googleapis.com/firebase-often-dev.appspot.com/static/img/iphone.svg) no-repeat 100% 100%;
+  background-size: contain;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 104px;
+  margin-top: -18px;
+  width: 282px;
+  height: 604px;
+  z-index: 1000;
+
+  .device-content {
+    position: absolute;
+    top: 117px;
+    left: 36px;
+    right: 36px;
+    bottom: 117px;
+  }
+
+  &.responsive {
+    @media (min-width: @screen-xs-min) {
+      width: 320px;
+      height: 685px;
+      
+      .device-content {
+        top: 132px;
+        left: 40px;
+        right: 40px;
+        bottom: 128px;
+      }
+    }
+
+    @media (min-width: @screen-md-min) {
+      width: 400px;
+      height: 856px;
+
+      .device-content {
+        left: 50px;
+        right: 50px;
+        top: 164px;
+        bottom: 159px;
+        overflow: hidden;
+      }
+    }
+  }
+}

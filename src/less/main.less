@@ -1,54 +1,18 @@
+@import "bootstrap/bootstrap";
 @import "nav";
 @import "brand";
+@import "device";
 
-html {
-  height: 100%;
-  margin-left: 220px;
-  margin-right: 220px;
-}
+.home {
+  .nav {
+    padding: 0 54px;
+  }
 
-body {
-  height: 100%;
-  max-width: 860px;
-  background-color: #fff;
-  margin: 0 auto;
-}
-
-#contain {
-  height:100%;
-  position:relative;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-/* LOGIN BUTTON */
-
-.login-btn {
-  display: inline-block;
-  padding: 0 0 0 18px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  color: #202020;
-  display: inline-block;
-  border-radius: 33px;
-  border: solid 2px #202020;
-  padding: 6px 24px;
-
-  &:hover {
-    color:#fff;
-    background: #202020;
-    text-decoration: none;
-    cursor: pointer;
-    -webkit-transition: background-color .20s linear;
-    -moz-transition: background-color .20s linear;
-    -o-transition: background-color .20s linear;
-    transition: background-color .20s linear;
+  #video {
+    width: 100%;
+    height: 100%;
   }
 }
-
-/* FADE IN */
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -113,46 +77,6 @@ body {
 .left-section {
   float: left;
 }
-
-#device {
-  right: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  position: relative;
-  background: url(https://storage.googleapis.com/firebase-often-dev.appspot.com/static/img/iphone.svg) no-repeat 100% 100%;
-  background-size: contain;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  margin-left: 104px;
-  margin-top: -18px;
-  width: 282px;
-  height: 604px;
-  z-index: 1000;
-}
-
-#device #video {
-  position: absolute;
-  top: 117px;
-  left: 36px;
-  width: 210px;
-  height: 374px;
-}
-
-/*.device {
-  width: 100%;
-  clear: both;
-}
-
-.content_section_1 img.device-image {
-  width: 282px;
-  height: 604px;
-  object-fit: contain;
-  display: block;
-  margin-left: 94px;
-  margin-top: 8px;
-}*/
 
 .right-section {
   float: right;
@@ -926,12 +850,8 @@ body {
     margin-right: 0px;
   }
 
-  body {
-    width: 800px;
-  }
-
   .nav {
-    padding: 30px 72px 0 72px;
+    padding: 0px 72px;
   }
 
   .divider {
@@ -980,7 +900,7 @@ body {
     margin-left: 0px;
   }
 
-  #device {
+  .device {
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -1021,11 +941,7 @@ body {
     margin-right: 0px;
   }
 
-  body {
-    width: 400px;
-  }
-
-  .button_container {
+  .login-btn {
     color: #fff;
     background-color: #202020;
     height: 34px;
@@ -1081,7 +997,7 @@ body {
     margin-left: 0px;
   }
 
-  #device {
+  .device {
     display: block;
     margin: 0 auto;
     margin-top: 18px;
@@ -1279,12 +1195,8 @@ body {
 /* Portrait */
 @media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
 /*---- Home ---- */
-  html {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 
-  body {
+  .container {
     width: 100%;
   }
 
@@ -1292,11 +1204,11 @@ body {
     padding: none;
   }
 
-  .nav .nav_links .menu {
+  .nav .nav-links .menu {
     display: none;
   }
 
-  .nav .nav_links {
+  .nav .nav-links {
     margin-top: 14px;
   }
 
@@ -1313,7 +1225,7 @@ body {
     display: none;
   }
 
-  .button_container {
+  .login-btn {
     display: none;
   }
 
@@ -1361,7 +1273,7 @@ body {
     margin-left: 0px;
   }
 
-  #device {
+  .device {
     display: block;
     margin: 0 auto;
     margin-top: 18px;
@@ -1569,19 +1481,15 @@ body {
     margin-right: 0px;
   }
 
-  body {
-    width: 375px;
-  }
-
   .nav {
     padding: 24px 12px 0 12px;
   }
 
-  .nav .nav_links .menu {
+  .nav .nav-links .menu {
     display: none;
   }
 
-  .nav .nav_links {
+  .nav .nav-links {
     margin-top: 14px;
   }
 
@@ -1599,7 +1507,7 @@ body {
     display: none;
   }
 
-  .button_container {
+  .login-btn {
     display: none;
   }
 
@@ -1657,7 +1565,7 @@ body {
     margin-left: 0px;
   }
 
-  #device {
+  .device {
     display: block;
     margin: 0 auto;
     margin-top: 18px;
@@ -1864,19 +1772,15 @@ body {
     margin-right: 0px;
   }
 
-  body {
-    width: 375px;
-  }
-
   .nav {
     padding: 24px 12px 0 12px;
   }
 
-  .nav .nav_links .menu {
+  .nav .nav-links .menu {
     display: none;
   }
 
-  .nav .nav_links {
+  .nav .nav-links {
     margin-top: 14px;
   }
 
@@ -1894,7 +1798,7 @@ body {
     display: none;
   }
 
-  .button_container {
+  .login-btn {
     display: none;
   }
 
@@ -1948,7 +1852,7 @@ body {
     margin-left: 0px;
   }
 
-  #device {
+  .device {
     display: block;
     margin: 0 auto;
     margin-top: 18px;
