@@ -23,9 +23,12 @@ gulp.task('copy', ['clean'], function () {
 });
 
 gulp.task('less', function () {
-    return gulp.src('./src/less/style.less')
+    return gulp.src([
+            './src/less/style.less',
+            './src/less/main.less'
+        ])
         .pipe(less())
-        .pipe(gulp.dest('./build/public/css'));
+        .pipe(gulp.dest('./build/public/css', {overwrite: true}));
 });
 
 gulp.task('build', ['copy', 'less'], function () {

@@ -1,0 +1,57 @@
+.nav {
+  padding: 30px 54px 0 54px;
+
+  .brand {
+    height: 58px;
+    float: left;
+  }
+
+  .nav-links {
+    display: inline-block;
+    float: right;
+    margin-top: 4px;
+  }
+
+  .menu {
+    display: inline-block;
+
+    li {
+      display: inline-block;
+      margin: 0 auto;
+      font-family: "Open Sans", sans-serif;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      font-size: 12px;
+      list-style: none;
+      padding: 0px;
+      text-transform: capitalize;
+
+      a {
+        color: rgba(32,32,32,0.74);
+        padding: 0 18px 0 0;
+        line-height: 55px;
+        text-decoration: none;
+
+        a:hover {
+          color:#202020;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width : 400px) and (max-width: 799px) {
+  .nav {
+    padding: 30px 18px 0 18px;
+
+    .menu {
+      display: none;
+    }
+
+    .nav-links {
+      margin-top: 14px;
+    }
+  }
+}
+
