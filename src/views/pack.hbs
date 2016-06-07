@@ -1,44 +1,46 @@
-<div class="page container">
-    <header>
-        <div class="brand">
-            <div class="logo">Often</div>
-            <div class="message">| Express Yourself</div>
-        </div>
-    </header>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="header">
-                <div class="image" style="background-image: url({{image.large_url}})"></div>
-                <div class="mask"></div>
+<div class="container pack-item">
+    {{> nav}}
+    <div class="device responsive">
+        <div class="page device-content">
+            <div class="nano">
+                <div class="nano-content">
+                    <div class="row">
+                        <div class="header">
+                            <div class="image" style="background-image: url({{image.large_url}})"></div>
+                            <div class="mask"></div>
 
-                <div class="meta">
-                    <h2 class="name">{{name}}</h2>
-                    <div class="description">
-                        <span>{{description}}</span>
+                            <div class="meta">
+                                <h2 class="name">{{name}}</h2>
+                                <div class="description">
+                                    <span>{{description}}</span>
+                                </div>
+                                <a href="tryoften://pack/{{id}}" class="primary download-btn">Open in App</a>
+                            </div>
+
+                            <div class="tabbar">
+                                <div id="quote" class="tab selected">Quotes</div>
+                                <div id="gif" class="tab">GIFS</div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="tryoften://pack/{{id}}" class="primary download-btn">Open in App</a>
-                </div>
-
-                <div class="tabbar">
-                    <div id="quote" class="tab selected">Quotes</div>
-                    <div id="gif" class="tab">GIFS</div>
+                    <div class="items row">
+                    {{#items}}
+                        <div class="item {{type}}">
+                            {{#if isGIF}}
+                                <img src="{{image.medium_url}}" />
+                            {{else}}
+                                <span>{{text}}</span>
+                                <div class="category" id="{{category_id}}">{{category_name}}</div>
+                            {{/if}}
+                        </div>
+                    {{/items}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="items row">
-    {{#items}}
-        <div class="item {{type}}">
-            {{#if isGIF}}
-                <img src="{{image.medium_url}}" />
-            {{else}}
-                <span>{{text}}</span>
-                <div class="category" id="{{category_id}}">{{category_name}}</div>
-            {{/if}}
-        </div>
-    {{/items}}
-    </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js"></script>
+<script src="/public/js/jquery.nanoscroller.js"></script>
 <script src="/public/js/browser-deeplink.js"></script>
 <script src="/public/js/pack.js"></script>

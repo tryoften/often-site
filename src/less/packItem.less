@@ -8,18 +8,6 @@
     }
   }
 
-  @media (min-width: @screen-sm-min) {
-    width: 500px;
-  }
-
-  @media (min-width: @screen-md-min) {
-    width: 500px;
-  }
-
-  @media (min-width: @screen-lg-min) {
-    width: 500px;
-  }
-
   .header {
     height: 300px;
     color: @gray-light;
@@ -41,6 +29,7 @@
       top: 10px;
       width: 100%;
       text-align: center;
+      left: 0;
     }
 
     .name, .description {
@@ -78,7 +67,7 @@
     }
 
     .download-btn {
-      display: inline-block;
+      display: none;
       background-color: @brand-success;
       color: white;
       font-weight: bold;
@@ -89,6 +78,10 @@
       border: none;
       padding: 10px 18px;
       margin: 0px auto;
+
+      @media (max-width: @screen-xs-min) {
+        display: inline-block;
+      }
     }
 
     .image {
@@ -101,6 +94,7 @@
     }
   }
 
+
   .header, .items {
     @media (min-width: @screen-xs-max) {
       margin: 0 auto;
@@ -109,10 +103,12 @@
 
   .tabbar {
     height: 50px;
+    line-height: 50px;
     width: 100%;
     position: absolute;
     background: white;
     bottom: 0;
+    // z-index: 99;
 
     .tab {
       width: 49%;
@@ -124,7 +120,7 @@
       letter-spacing: 2px;
       font-size: 11px;
       text-align: center;
-      line-height: 50px;
+      box-sizing: border-box;
 
       &.selected {
         color: @gray-darker;
@@ -139,10 +135,6 @@
     background-color: #f7f7f7;
     position: relative;
     transition: all 0.3s ease;
-
-    @media (min-width: @screen-md-min) {
-      font-size: 14px;
-    }
 
     &.quote {
       padding: 0px 35px;
@@ -194,4 +186,96 @@
       transition: all 0.3s ease;
     }
   }
+
+  @media (min-width: @screen-xs-min) and (max-width: @screen-md-min) {
+    .header {
+      height: 180px;
+
+      .name {
+        margin-top: 24px;
+        font-size: 14px;
+      }
+
+      .description {
+        font-size: 10px;
+      }
+
+      .tabbar {
+        height: 30px;
+        line-height: 30px;
+
+        .tab {
+          font-size: 8px;
+          letter-spacing: 1.5px;
+
+          &.selected {
+            border-bottom: 2px solid @brand-success;
+          }
+        }
+      }
+    }
+
+    .item {
+      font-size: 10px;
+
+      &.quote {
+        height: 50px;
+        line-height: 50px;
+      }
+
+      &.gif {
+        height: 50px;
+        width: 41.5%;
+      }
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    
+  }
 }
+
+@media (max-width: @screen-xs-min) {
+  .container {
+    padding: 0;
+  }
+
+  .nav {
+    padding: 0 18px 0;
+  }
+
+  .pack-item {
+    .device, .device .device-content {
+      position: relative;
+      background: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: auto;
+    }
+
+    .nano > .nano-content {
+      position: relative;
+    }
+  }
+}
+
+.pack-item {
+  .device {
+    margin: 0 auto;
+        
+    @media (min-width: @screen-xs-min) {
+      margin: -50px auto;
+    }
+
+    @media (min-width: @screen-md-min) {
+      margin: -80px auto;
+    }
+
+  }
+}
+

@@ -1,39 +1,5 @@
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="check-icon">
-                <img class="checkicon" src="https://storage.googleapis.com/firebase-often-dev.appspot.com/static/img/checkicon.svg" onContextMenu="return false;" draggable="false"></img>
-            </div>
-            <div class="modal-header">
-                <h2 class="modal-title" id="label">Almost Finished!</h2>
-            </div>
-            <div class="modal-body">
-                <h3>We need to confirm your email address fam. To finish signing up for the beta, click the link in the email we just sent you.</h3>
-                <h4>- Much love, The Often Team</h4>
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-default" data-dismiss="modal">OK</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="contain">
-    <div class="nav nav_primary fade-in one">
-        <div class="cont nav_background">
-            <div class="brand">
-                <div class="brand_logo">Often</div>
-                <div class="brand_message">| Express Yourself</div>
-            </div>
-            <div class="nav_links">
-                <ul class="menu">
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="http://www.twitter.com/tryoften">Support</a></li>
-                </ul>
-                <a href="#"><div class="button_container">Log In</div></a>
-            </div>
-        </div>
-    </div>
+<div class="container home">
+    {{> nav}}
 
     <div class="content_section_1">
         <div class="right-section">
@@ -48,8 +14,10 @@
             </div>
         </div>
         <div class="left-section fade-in two">
-            <div id="device">
-                <img id="video" src="https://storage.googleapis.com/firebase-often-dev.appspot.com/static/img/often.gif" onContextMenu="return false;" draggable="false"></img>
+            <div class="device">
+                <div class="device-content">
+                    <img id="video" src="https://storage.googleapis.com/firebase-often-dev.appspot.com/static/img/often.gif" onContextMenu="return false;" draggable="false" />
+                </div>
             </div>
         </div>
     </div>
@@ -131,6 +99,26 @@
                 <ul class="copyright_message">
                     <li><a href="#">© Often, Inc. | Made with 🔑 in NYC</a></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="check-icon">
+                <img class="checkicon" src="https://storage.googleapis.com/firebase-often-dev.appspot.com/static/img/checkicon.svg" onContextMenu="return false;" draggable="false"></img>
+            </div>
+            <div class="modal-header">
+                <h2 class="modal-title" id="label">Almost Finished!</h2>
+            </div>
+            <div class="modal-body">
+                <h3>We need to confirm your email address fam. To finish signing up for the beta, click the link in the email we just sent you.</h3>
+                <h4>- Much love, The Often Team</h4>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default" data-dismiss="modal">OK</a>
             </div>
         </div>
     </div>
