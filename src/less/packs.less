@@ -1,25 +1,45 @@
 .packs {
-  width: 775px;
-  margin: 0 auto;
 
   .nav {
     padding: 0 29px;
   }
 
-  .items {
-    @media (max-width: @screen-xs-min) {
-      max-width: 400px;
-      margin: 0 auto;
+  .page {
+    .header {
+      height: 50px;
+      background: white;
+
+      .meta {
+        top: 0;
+      }
+
+      .mask {
+        display: none;
+      }
+
+      .name {
+        height: inherit;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        line-height: 50px;
+        margin: 0;
+        color: black;
+      }
     }
   }
 
+  .items {
+    padding-top: 10px;
+  }
+
   .media-item {
-    margin: 10px;
+    margin: 5px;
     display: block;
     width: 132px;
   }
 
   .media-item-link {
+    display: inline-block;
 
     @media (max-width: @screen-xs-min) {
       width: 49%;
@@ -29,7 +49,6 @@
         margin: 10px auto;
       }
     }
-
-    display: inline-block;
   }
+
 }

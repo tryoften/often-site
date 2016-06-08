@@ -1,25 +1,46 @@
-<div class="packs">
-    {{> nav}}
-    
-    <div class="items">
-        {{#items}}
-            <a class="media-item-link" href="/pack/{{id}}">
-                <div class="media-item pack">
-                    <div class="image-container" style="background-image: url({{image.small_url}})">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                             class="mask" width="135px" height="21px" viewBox="0 0 135 21">
-                            <g id="Artboard-1" transform="translate(-87.000000, -224.000000)" fill="#FFFFFF">
-                                <path d="M222,224.283203 L222,245 L87,245 L222,224.283203 Z" id="mask"></path>
-                            </g>
-                        </svg>
+<div class="container packs">
+     <div class="device responsive centered">
+        <div class="page device-content">
+            <div class="nano">
+                <div class="nano-content">
+                    <div class="row">
+                        <div class="header">
+                            <div class="image" style="background-image: url({{image.large_url}})"></div>
+                            <div class="mask"></div>
+
+                            <div class="meta">
+                                <h2 class="name">Packs</h2>
+                            </div>
+                        </div>
                     </div>
-                    <div class="meta">
-                        <div class="title">{{name}}</div>
-                        <div class="subtitle">{{items_count}} items</div>
-                        <div class="description">{{description}}</div>
+                    <div class="items row">
+                    {{#items}}
+                        <a class="media-item-link" href="/pack/{{id}}">
+                            <div class="media-item pack">
+                                <div class="image-container" style="background-image: url({{image.small_url}})">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                         class="mask" width="135px" height="21px" viewBox="0 0 135 21">
+                                        <g id="Artboard-1" transform="translate(-87.000000, -224.000000)" fill="#FFFFFF">
+                                            <path d="M222,224.283203 L222,245 L87,245 L222,224.283203 Z" id="mask"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="meta">
+                                    <div class="title">{{name}}</div>
+                                    <div class="subtitle">{{items_count}} items</div>
+                                    <div class="description">{{description}}</div>
+                                </div>
+                            </div>
+                        </a>
+                    {{/items}}
                     </div>
                 </div>
-            </a>
-        {{/items}}
+            </div>
+        </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js"></script>
+<script src="/public/js/jquery.nanoscroller.js"></script>
+<script>
+    $('.nano').nanoScroller();
+</script>

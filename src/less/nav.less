@@ -1,6 +1,9 @@
 .nav {
   margin-top: 30px;
   padding: 0;
+  position: relative;
+  z-index: 999;
+  padding: 0 54px;
 
   .brand {
     height: 58px;
@@ -28,7 +31,7 @@
       text-transform: capitalize;
 
       a {
-        color: rgba(32,32,32,0.74);
+        color: rgba(32, 32, 32, 0.74);
         padding: 0 18px 0 0;
         line-height: 55px;
         text-decoration: none;
@@ -82,3 +85,34 @@
   }
 }
 
+
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
+  .container {
+    width: 100%;
+  }
+
+  .nav {
+    padding: none;
+  }
+
+  .nav .nav-links .menu {
+    display: none;
+  }
+
+  .nav .nav-links {
+    margin-top: 14px;
+  }
+
+  .nav .cont .brand {
+    float: none;
+  }
+
+  .nav .brand .brand_logo {
+    text-align: center;
+    display: block;
+  }
+
+  .nav .brand_message {
+    display: none;
+  }
+}

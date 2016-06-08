@@ -22,16 +22,20 @@
     <meta property="al:ios:app_store_id"   content="1053313047">
     <meta property="al:ios:url"            content="tryoften://pack/{{id}}">
     <meta property="al:web:url"            content="https://tryoften.com/">
-
     <title>{{title}}</title>
     <link rel='icon' href='https://storage.googleapis.com/firebase-often-dev.appspot.com/static/img/favicon.ico' type='image/x-icon'/>
-    <link rel="stylesheet" href="/public/css/main.css" type="text/css">
-    <link rel="stylesheet" href="https://storage.googleapis.com/firebase-often-dev.appspot.com/static/css/flickity.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/public/css/style.css" type="text/css">
 </head>
 <body>
-    {{{body}}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script src="https://storage.googleapis.com/firebase-often-dev.appspot.com/static/js/bootstrap.min.js"></script>
-    <script src="https://storage.googleapis.com/firebase-often-dev.appspot.com/static/js/main.js"></script>
+    <div class="container">
+        {{> nav}}
+    </div>
+    <div class="main-content">
+        {{{body}}}
+    </div>
+    <div class="container">
+        {{> footer}}
+    </div>
+    <script src="/public/js/main.js"></script>
 </body>
 </html>

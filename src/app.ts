@@ -39,9 +39,8 @@ app.get('/packs', (req: Request, res: Response) => {
 		.map(pack => pack.toJSON());
 
 	res.render('packs', {
-		title: "Packs",
-		items: data,
-		layout: 'pack-page'
+		title: "Packs - Often",
+		items: data
 	});
 });
 
@@ -56,8 +55,7 @@ app.get('/pack/:id', (req: Request, res: Response) => {
 		}
 
 		res.render('pack', Object.assign({}, data, {
-			title: data.name,
-			layout: 'pack-page'
+			title: data.name + " - Often"
 		}));
 	});
 });

@@ -10,7 +10,7 @@ function filterItems(type) {
     $('.item.'+type).fadeIn();
 }
 
-$('.tab').click(function(e) {
+$(document).on('click', '.tab', function(e) {
     var selectedTab = $('.tab.selected');
     var tab = $(e.target);
 
