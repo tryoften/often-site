@@ -1,22 +1,25 @@
-.nav {
+.navbar.main-nav {
   margin-top: 30px;
   padding: 0;
   position: relative;
   z-index: 999;
   padding: 0 54px;
 
-  .brand {
-    height: 58px;
-    float: left;
+  .navbar-toggle {
+    float: none;
+    
+    .icon-bar {
+      background: @gray;
+    }
   }
 
-  .nav-links {
-    display: inline-block;
-    float: right;
-    margin-top: 4px;
+  .navbar-brand {
+      padding: 15px 0;
+      float: none;
+      display: inline-block;
   }
 
-  .menu {
+  .navbar-nav {
     display: inline-block;
 
     li {
@@ -32,87 +35,64 @@
 
       a {
         color: rgba(32, 32, 32, 0.74);
-        padding: 0 18px 0 0;
+        padding: 0 9px;
         line-height: 55px;
         text-decoration: none;
 
-        a:hover {
-          color:#202020;
+        &:hover, &:active {
+          color: #202020;
           text-decoration: none;
+        }
+
+        &.login-btn {
+          display: inline-block;
+          padding: 0 18px;
+          color: #202020;
+          padding: 6px 24px;
+          font-family: "Montserrat", sans-serif;
+          font-size: 12px;
+          letter-spacing: 0.5px;
+          line-height: normal;
+          margin: 11px 5px;
+          border-radius: 33px;
+          border: solid 2px #202020;
+
+          &:hover {
+            color:#fff;
+            background: #202020;
+            cursor: pointer;
+            .transition(background-color .20s linear);
+          }
         }
       }
     }
   }
 
-  .login-btn {
-    display: inline-block;
-    padding: 0 0 0 18px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    color: #202020;
-    display: inline-block;
-    border-radius: 33px;
-    border: solid 2px #202020;
-    padding: 6px 24px;
-
-    &:hover {
-      color:#fff;
-      background: #202020;
-      text-decoration: none;
-      cursor: pointer;
-      -webkit-transition: background-color .20s linear;
-      -moz-transition: background-color .20s linear;
-      -o-transition: background-color .20s linear;
-      transition: background-color .20s linear;
-    }
-  }
-
-}
-
-@media only screen and (min-width : 400px) and (max-width: 799px) {
-  .nav {
-    margin-top: 15px;
+  @media (max-width: @screen-xs-max) {
+    margin: 0;
     padding: 0px 18px;
 
-    .menu {
+    .navbar-toggle {
+      margin-right: 0;
+    }
+
+    .navbar-nav {
+      display: block;
+
+      li {
+        display: block;
+        text-align: center;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid @gray-lighter;
+        }
+      }
+    }
+
+    .brand .message {
       display: none;
     }
-
-    .nav-links {
-      margin-top: 14px;
-    }
   }
+
 }
 
-
-@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
-  .container {
-    width: 100%;
-  }
-
-  .nav {
-    padding: none;
-  }
-
-  .nav .nav-links .menu {
-    display: none;
-  }
-
-  .nav .nav-links {
-    margin-top: 14px;
-  }
-
-  .nav .cont .brand {
-    float: none;
-  }
-
-  .nav .brand .brand_logo {
-    text-align: center;
-    display: block;
-  }
-
-  .nav .brand_message {
-    display: none;
-  }
-}

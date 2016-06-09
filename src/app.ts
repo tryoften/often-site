@@ -33,7 +33,7 @@ app.get('/css/style.css', function (req, res) {
 	res.sendFile(path.join(__dirname, 'css/style.css'));
 });
 
-app.get('/packs', (req: Request, res: Response) => {
+app.get('/keyboards', (req: Request, res: Response) => {
 	let data = packs
 		.filter(pack => !pack.isFavorites && !pack.isRecents && !pack.deleted && pack.published)
 		.map(pack => pack.toJSON());
@@ -44,7 +44,7 @@ app.get('/packs', (req: Request, res: Response) => {
 	});
 });
 
-app.get('/pack/:id', (req: Request, res: Response) => {
+app.get('/keyboard/:id', (req: Request, res: Response) => {
 	let pack = packs.get(req.params.id);
 
 	pack.syncData().then(() => {

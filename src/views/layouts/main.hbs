@@ -27,16 +27,17 @@
     <link rel="stylesheet" href="/public/css/style.css" type="text/css">
 </head>
 <body>
-    <div class="container">
+    <header class="container">
         {{> nav}}
-    </div>
-    <div class="main-content">
+    </header>
+    <section class="main-content">
         {{{body}}}
-    </div>
-    <div class="container">
+    </section>
+    <footer class="container">
         {{> footer}}
-    </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
     <script src="/public/js/jquery.nanoscroller.js"></script>
     <script src="/public/js/browser-deeplink.js"></script>
     <script src="/public/js/pack.js"></script>

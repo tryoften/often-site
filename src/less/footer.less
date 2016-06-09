@@ -4,6 +4,10 @@
   width: 100%;
   padding: 0 54px 30px 54px;
 
+  ul {
+    padding: 0;
+  }
+
   .copyright {
     float: left;
 
@@ -31,34 +35,6 @@
     float: right;
   }
 
-  .mobile_footer_menu {
-    display: none;
-  }
-
-  .mobile_footer_menu li {
-    display: inline-block;
-    margin: 0 auto;
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 0.5px;
-    font-weight: 400;
-    font-size: 12px;
-    list-style: none;
-    padding: 0px;
-    text-transform: capitalize;
-  }
-
-  .mobile_footer_menu li a {
-    color: rgba(32,32,32,0.74);
-    padding: 0 0 0 18px;
-    line-height: 55px;
-    text-decoration: none;
-  }
-
-  .mobile_footer_menu li a:hover {
-    color:#202020;
-    text-decoration: none;
-  }
-
   .footer_menu li {
     display: inline-block;
     margin: 0 auto;
@@ -82,61 +58,23 @@
     color:#202020;
     text-decoration: none;
   }
-}
 
-@media only screen and (min-width : 400px) and (max-width: 799px) {
-  .footer .copyright {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    float: none;
-  }
+  @media (max-width: @screen-xs-max) {
+    .copyright {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      float: none;
+    }
 
-  .footer .footer_links {
-    float: none;
-  }
+    .footer_links {
+      float: none;
 
-  .footer .footer_links .footer_menu li {
-    display: block;
-    text-align: center;
-  }
-
-  .footer .footer_links .mobile_footer_menu {
-    display: block;
-  }
-
-  .footer .footer_links .mobile_footer_menu li {
-    display: block;
-    text-align: center;
-  }
-
-}
-
-@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
-
-  .footer .copyright {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    float: none;
-  }
-
-  .footer .footer_links {
-    float: none;
-  }
-
-  .footer .footer_links .footer_menu li {
-    display: block;
-    text-align: center;
-  }
-
-  .footer .footer_links .mobile_footer_menu {
-    display: block;
-  }
-
-  .footer .footer_links .mobile_footer_menu li {
-    display: block;
-    text-align: center;
+      .footer_menu li {
+        display: block;
+        text-align: center;
+      }
+    }
   }
 
 }

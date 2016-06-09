@@ -120,13 +120,12 @@
     position: absolute;
     background: white;
     bottom: 0;
-    // z-index: 99;
 
     .tab {
       width: 49%;
       display: inline-block;
       height: inherit;
-      color: @gray-light;
+      color: @gray;
       font-family: 'Montserrat';
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -146,6 +145,7 @@
     font-size: 12px;
     background-color: #f7f7f7;
     position: relative;
+    transition: all 0.3s ease;
 
     &.quote {
       padding: 0px 35px;
@@ -241,9 +241,6 @@
     }
   }
 
-  @media (min-width: @screen-md-min) {
-    
-  }
 }
 
 @media (max-width: @screen-xs-min) {
@@ -251,26 +248,13 @@
     padding: 0;
   }
 
+  .page {
+    .header {
+      height: 300px;
+    }
+  }
+
   .nav {
     padding: 0 18px 0;
-  }
-
-  .pack-item {
-    .device, .device .device-content {
-      position: relative;
-      background: none;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: auto;
-    }
-
-    .nano > .nano-content {
-      position: relative;
-    }
-  }
+  }  
 }

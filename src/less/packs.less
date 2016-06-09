@@ -8,6 +8,8 @@
     .header {
       height: 50px;
       background: white;
+      border: 1px solid @gray-lighter;
+
 
       .meta {
         top: 0;
@@ -51,4 +53,16 @@
     }
   }
 
+  @media (max-width: @screen-xs-min) {
+    .page {
+      background: @gray-lighter !important;
+    }
+
+    .items {
+      width: 280px !important;
+      margin: 0 auto !important;
+    }
+  }
+
 }
+
