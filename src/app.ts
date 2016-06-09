@@ -29,6 +29,10 @@ app.get('/about', function (req, res) {
 	res.render('about');
 });
 
+app.get('/privacy', function(req, res) {
+	res.render('privacy');
+});
+
 app.get('/css/style.css', function (req, res) {
 	res.sendFile(path.join(__dirname, 'css/style.css'));
 });

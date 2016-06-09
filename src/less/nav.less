@@ -7,7 +7,7 @@
 
   .navbar-toggle {
     float: none;
-    
+
     .icon-bar {
       background: @gray;
     }
@@ -39,8 +39,9 @@
         line-height: 55px;
         text-decoration: none;
 
-        &:hover, &:active {
-          color: #202020;
+        &:hover, &:active, &:focus {
+          color: black;
+          background: none !important;
           text-decoration: none;
         }
 
@@ -58,8 +59,8 @@
           border: solid 2px #202020;
 
           &:hover {
-            color:#fff;
-            background: #202020;
+            color: #fff;
+            background: #202020 !important;
             cursor: pointer;
             .transition(background-color .20s linear);
           }
@@ -70,7 +71,18 @@
 
   @media (max-width: @screen-xs-max) {
     margin: 0;
-    padding: 0px 18px;
+    padding: 0px 10px;
+
+    .navbar-brand {
+      .logo {
+        height: 25px;
+      }
+    }
+
+    .navbar-collapse {
+      padding: 0;
+      overflow: hidden;
+    }
 
     .navbar-toggle {
       margin-right: 0;
@@ -78,13 +90,14 @@
 
     .navbar-nav {
       display: block;
+      background: rgba(247, 247, 247, 0.41);
 
       li {
         display: block;
         text-align: center;
 
         &:not(:last-child) {
-          border-bottom: 1px solid @gray-lighter;
+          border-bottom: 1px solid @gray-light;
         }
       }
     }
@@ -93,6 +106,11 @@
       display: none;
     }
   }
+}
 
+@media (max-width: @screen-xs-max) {
+  header {
+    background: @gray-lighter;
+  }
 }
 
