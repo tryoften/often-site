@@ -1,7 +1,6 @@
 <div class="container pack-item">
-    {{> nav}}
-    <div class="device responsive">
-        <div class="page device-content">
+    <div class="device responsive centered">
+        <div class="page device-content fade-in one">
             <div class="nano">
                 <div class="nano-content">
                     <div class="row">
@@ -10,6 +9,7 @@
                             <div class="mask"></div>
 
                             <div class="meta">
+                                <a class="back-btn" href="/keyboards"></a>
                                 <h2 class="name">{{name}}</h2>
                                 <div class="description">
                                     <span>{{description}}</span>
@@ -40,7 +40,3 @@
         </div>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js"></script>
-<script src="/public/js/jquery.nanoscroller.js"></script>
-<script src="/public/js/browser-deeplink.js"></script>
-<script src="/public/js/pack.js"></script>

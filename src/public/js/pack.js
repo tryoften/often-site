@@ -1,16 +1,9 @@
-deeplink.setup({
-    iOS: {
-        appName: "often-search-collect-share",
-        appId: "1053313047",
-    }
-});
-
 function filterItems(type) {
     $('.item').fadeOut();
     $('.item.'+type).fadeIn();
 }
 
-$('.tab').click(function(e) {
+$(document).on('click', '.tab', function(e) {
     var selectedTab = $('.tab.selected');
     var tab = $(e.target);
 

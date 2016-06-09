@@ -1,6 +1,7 @@
 .page {
   padding: 0;
   overflow: hidden;
+  .animation-duration(0.3s);  
 
   .brand {
     .logo {
@@ -9,7 +10,7 @@
   }
 
   .header {
-    height: 300px;
+    height: 250px;
     color: @gray-light;
     position: relative;
 
@@ -32,6 +33,17 @@
       left: 0;
     }
 
+    .back-btn {
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: 5px;
+      height: 30px;
+      width: 30px;
+      background: url(/public/img/back-arrow.svg) no-repeat center;
+      background-size: 40%;
+    }
+
     .name, .description {
       text-align: center;
       color: white;
@@ -45,7 +57,7 @@
       text-transform: uppercase;
       font-weight: 300;
 
-      @media (min-width: @screen-md-min) {
+      @media (min-width: @device-bg-large-min) {
         font-size: 20px;
       }
     }
@@ -108,13 +120,12 @@
     position: absolute;
     background: white;
     bottom: 0;
-    // z-index: 99;
 
     .tab {
       width: 49%;
       display: inline-block;
       height: inherit;
-      color: @gray-light;
+      color: @gray;
       font-family: 'Montserrat';
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -156,7 +167,7 @@
       display: inline-block;
       margin: .5% .5% .5% .9%;
       width: 48%;
-      height: 120px;
+      height: 100px;
       overflow: hidden;
       border-radius: 2px;
 
@@ -230,9 +241,6 @@
     }
   }
 
-  @media (min-width: @screen-md-min) {
-    
-  }
 }
 
 @media (max-width: @screen-xs-min) {
@@ -240,42 +248,13 @@
     padding: 0;
   }
 
+  .page {
+    .header {
+      height: 300px;
+    }
+  }
+
   .nav {
     padding: 0 18px 0;
-  }
-
-  .pack-item {
-    .device, .device .device-content {
-      position: relative;
-      background: none;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: auto;
-    }
-
-    .nano > .nano-content {
-      position: relative;
-    }
-  }
+  }  
 }
-
-.pack-item {
-  .device {
-    margin: 0 auto;
-        
-    @media (min-width: @screen-xs-min) {
-      margin: -50px auto;
-    }
-
-    @media (min-width: @screen-md-min) {
-      margin: -80px auto;
-    }
-
-  }
-}
-
