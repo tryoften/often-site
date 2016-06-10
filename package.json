@@ -4,16 +4,13 @@
   "description": "Often website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node build/app.js",
+    "monitor": "gulp server",
+    "deploy": "gcloud preview app deploy"
   },
   "author": "",
   "engines": {
     "node": ">=5.9.1"
-  },
-  "scripts": {
-    "start": "node build/app.js",
-    "monitor": "gulp server",
-    "deploy": "gcloud preview app deploy"
   },
   "license": "ISC",
   "dependencies": {
@@ -22,7 +19,8 @@
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "lesshat": "^3.0.2",
-    "object-hash": "^1.1.2"
+    "object-hash": "^1.1.2",
+    "sha1": "^1.1.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
