@@ -21,7 +21,8 @@ app.use('/public/', express.static(path.join(__dirname, 'public')) as Router);
 
 app.get('/', function (req, res) {
 	res.render('home', {
-		title: 'Often'
+		title: 'Often',
+		url: req.protocol + '://' + req.get('host') + req.originalUrl
 	});
 });
 
@@ -44,7 +45,8 @@ app.get('/keyboards', (req: Request, res: Response) => {
 
 	res.render('packs', {
 		title: "Packs - Often",
-		items: data
+		items: data,
+		url: req.protocol + '://' + req.get('host') + req.originalUrl
 	});
 });
 
@@ -59,7 +61,8 @@ app.get('/keyboard/:id', (req: Request, res: Response) => {
 		}
 
 		res.render('pack', Object.assign({}, data, {
-			title: data.name + " - Often"
+			title: data.name + " - Often",
+			url: req.protocol + '://' + req.get('host') + req.originalUrl
 		}));
 	});
 });
