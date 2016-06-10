@@ -50,7 +50,7 @@ app.get('/keyboards', (req: Request, res: Response) => {
 	});
 });
 
-app.get('/keyboard/:id', (req: Request, res: Response) => {
+app.get('/k(eyboard)?/:id', (req: Request, res: Response) => {
 	let pack = packs.get(req.params.id);
 
 	pack.syncData().then(() => {

@@ -163,30 +163,36 @@
 
 .positions {
   margin-top: 45px;
-}
 
-.positions li {
-  display: block;
-  margin: 0 auto;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 1px;
-  font-weight: 400;
-  list-style: none;
-  text-align: center;
-  padding: 0px;
-}
-.positions li a {
-  color: rgba(32, 32, 32, 0.54);
-  letter-spacing: 1px;
-  font-size: 13px;
-  padding:0 10px;
-  line-height:50px;
-  display:block;
-  text-decoration: none;
-}
-.positions li a:hover {
-  color: #21CE99;
-  text-decoration: none;
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 400;
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+  }
+
+  li a {
+    color: rgba(32, 32, 32, 0.54);
+    letter-spacing: 1px;
+    font-size: 13px;
+    padding: 0 10px;
+    line-height: 50px;
+    display: block;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    color: #21CE99;
+    text-decoration: none;
+  }
 }
 
 .nyc .skyline {
@@ -197,9 +203,9 @@
   margin-bottom: 120px;
 }
 
-@media only screen and (min-width : 400px) and (max-width: 799px) {
-  .about-us {
-    height: 600px;
+@media (max-width: @screen-sm-max) {
+  .about-us, .who-we-are {
+    height: auto;
   }
 
   .about h1 {
@@ -212,43 +218,6 @@
 
   .team .picture {
     width: 100%;
-  }
-
-  .who-we-are {
-    height: 1180px;
-  }
-
-  .team-images {
-    margin: 48px 36px 72px;
-  }
-
-  .nyc .skyline {
-    margin-top: 24px;
-    width: 100%;
-  }
-}
-
-
-/* Portrait */
-@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
-  .about-us {
-    height: 540px;
-  }
-
-  .about h1 {
-    width: 90%;
-  }
-
-  .about h2 {
-    width: 80%;
-  }
-
-  .team .picture {
-    width: 100%;
-  }
-
-  .who-we-are {
-    height: 1840px;
   }
 
   .team-images {

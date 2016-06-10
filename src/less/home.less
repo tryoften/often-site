@@ -16,7 +16,7 @@
 
   .slogan {
     width: 100%;
-    margin-top: 136px;
+    margin-top: 148px;
     margin-right: 32px;
   }
 
@@ -164,19 +164,19 @@
       }
     }
     
-    .illustration4 {
+    .illustration {
       float: none;
       margin-top: 14px;
       margin-right: 0;
-    }
 
-    .illustration4 img {
-      width: 627px;
-      height: 239px;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-      margin-top: -14px;
+      img {
+        width: 627px;
+        height: 239px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        margin-top: -14px;
+      }
     }
 
   }
@@ -245,6 +245,9 @@
   }
 
   @media (max-width: @screen-sm-max) {
+    body {
+      overflow: hidden;
+    }
 
     .login-btn {
       color: #fff;
@@ -320,6 +323,7 @@
         h1 {
           margin: 0 auto;
           text-align: center;
+          width: 100%
         }
 
         h2 {
