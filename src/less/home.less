@@ -73,6 +73,23 @@
     height: 380px;
     position: relative;
 
+    &.section-3 {
+      .message {
+        float: right;
+        text-align: right;
+        margin-right: 36px;
+      }
+
+      .message h2 {
+        width: 400px;
+      }
+
+      .illustration2 {
+        float: left;
+        margin-left: 36px;
+      }
+    }
+    
     &.large {
       height: 550px;
       margin-bottom: 100px;
@@ -96,16 +113,16 @@
       line-height: 36px;
       width: 400px;
       letter-spacing: 1px;
-      color: rgba(32, 32, 32, 0.9);
+      color: rgba(0, 0, 0, 0.9);
     }
 
     h2 {
       font-family: "Open Sans", sans-serif;
-      font-size: 13px;
-      width: 320px;
-      line-height: 24px;
+      font-size: 15px;
+      width: 380px;
+      line-height: 28px;
       letter-spacing: 0.5px;
-      color: rgba(32, 32, 32, 0.54);
+      color: rgba(0, 0, 0, 0.54);
       margin-top: 8px;
 
     }
@@ -129,7 +146,7 @@
       font-family: "Montserrat", sans-serif;
       font-size: 36px;
       line-height: 48px;
-      width: 400px;
+      width: 450px;
       letter-spacing: 2px;
       color: rgba(32, 32, 32, 0.9);
       text-align: left;
@@ -166,6 +183,7 @@
       h1, h2 {
         margin: 8px auto;
         text-align: center;
+        width: 400px;
       }
     }
     
@@ -292,9 +310,9 @@
           margin: 0 auto;
           text-align: center;
           margin-top: 90px;
-          font-size: 34px;
+          font-size: 30px;
           line-height: 44px;
-          width: 370px;
+          width: 400px;
           letter-spacing: 1.5px;
         }
 
@@ -318,6 +336,19 @@
 
     .section {
       height: auto;
+
+      &.section-3 {
+        .message {
+          text-align: center;
+          float: none;
+          width: 400px;
+        }
+
+        .illustration2 {
+          float: none;
+          margin-left: 0;
+        }
+      }
 
       .message {
         float: none;
