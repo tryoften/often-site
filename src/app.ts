@@ -2,7 +2,7 @@ import * as express from 'express';
 import * as exphbs from 'express-handlebars';
 import * as path from 'path';
 import { Request, Response, Router } from 'express';
-import { Packs, Pack } from '@often/often-core';
+import { Packs, Pack, User, firebaseApp } from '@often/often-core';
 
 let app = express();
 let packs = new Packs([], {autoSync: true});
@@ -34,10 +34,6 @@ app.get('/privacy', function(req, res) {
 	res.render('privacy');
 });
 
-app.get('/css/style.css', function (req, res) {
-	res.sendFile(path.join(__dirname, 'css/style.css'));
-});
-
 app.get('/keyboards', (req: Request, res: Response) => {
 	let data = packs
 		.filter(pack => !pack.isFavorites && !pack.isRecents && !pack.deleted && pack.published)
@@ -64,6 +60,28 @@ app.get('/k(eyboard)?/:id', (req: Request, res: Response) => {
 			title: data.name + " - Often",
 			url: req.protocol + '://' + req.get('host') + req.originalUrl
 		}));
+	});
+});
+
+app.get('/@:username', (req: Request, res: Response) => {
+	let database = firebaseApp.database();
+	let hash = new Buffer(String(req.params.username)).toString('base64');
+
+	let usernameRef = database.ref().child('/usernames').child(hash);
+
+	usernameRef.on('value', snapshot => {
+		let data = snapshot.val();
+		console.log(data);
+
+		new User({id: data.userid}).syncData().then((user) => {
+			let userData = user.toJSON();
+
+			res.render('user', Object.assign({}, userData, {
+				title: userData.name + " - Often",
+				url: req.protocol + '://' + req.get('host') + req.originalUrl,
+				mobileURL: 'tryoften://user/' + data.userid
+			}));
+		});
 	});
 });
 
